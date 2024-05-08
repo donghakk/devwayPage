@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "gamtan";
+  font-style: normal;
+  font-weight: 200;
+  src: url("./src/fonts/gamtan-Regular.woff") format("woff");
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+input::placeholder,
+label,
+button,
+textarea,
+select {
+  font-family: "gamtan";
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

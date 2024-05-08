@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Oringe from "../components/byDevway/oringe";
 import Chelitalk from "../components/byDevway/chelitalk";
+import Header from "../components/Common/Header";
 
 function byDevway() {
   // ts
