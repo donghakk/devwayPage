@@ -1,22 +1,26 @@
 import styled from "styled-components";
-import Header from "../components/Header";
 
-function byDevway() {
-  return;
-  <Container>
-    <div className="headerContainer">
-      <Header />
-    </div>
-  </Container>;
+function byDevway(){
+    // ts
+
+    return(
+        // html
+        <Intro>
+            <h1>
+                DEVWAY 소스를 활용해 만든 서비스가 세상에 나왔어요!
+            </h1>
+        </Intro>
+    )
 }
 
 export default byDevway;
 
-const Container = styled.div`
-  width: 100%;
-  .headerContainer {
-    width: 100%;
-    height: 100px;
-    background-color: red;
-  }
+// css
+const Intro = styled.div`
+display : flex;
+    h1{
+        width : 100px;
+        height : 100px;
+        color : balck;   
+    }
 `;
