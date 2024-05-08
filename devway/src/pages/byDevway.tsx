@@ -1,37 +1,52 @@
 import styled from "styled-components";
+import Oringe from "../components/byDevway/oringe";
+import Chelitalk from "../components/byDevway/chelitalk";
 
-<<<<<<< HEAD
-function byDevway(){
-    // ts
-
-    return(
-        // html
-        <Intro>
-            <h1>
-                DEVWAY 소스를 활용해 만든 서비스가 세상에 나왔어요!
-            </h1>
-        </Intro>
-    )
-=======
 function byDevway() {
+  // ts
+
   return (
-    <Container>
-      <div className="headerContainer">
-        <Header />
-      </div>
-    </Container>
+    // html
+    <Intro>
+      <h2>DEVWAY 소스를 활용해 만든 서비스가 세상에 나왔어요!</h2>
+
+      <Body>
+        <Oringe />
+        <Chelitalk />
+        <div className="content"></div>
+      </Body>
+
+      <Footer>QR코드를 통해 APK 파일을 다운로드 할 수 있습니다.</Footer>
+    </Intro>
   );
->>>>>>> cd94f2a1b695f467e14fdea54d4e9c302b9da76b
 }
 
 export default byDevway;
 
 // css
 const Intro = styled.div`
-display : flex;
-    h1{
-        width : 100px;
-        height : 100px;
-        color : balck;   
-    }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  h2 {
+    color: black;
+  }
+`;
+
+const Body = styled.div`
+  width: 80%;
+  display: flex;
+  margin: 50px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Footer = styled.h2`
+  color: black;
+  margin-top: 100px;
+  margin-bottom: 100px;
 `;
