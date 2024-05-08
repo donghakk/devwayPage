@@ -1,19 +1,19 @@
 import styled from "styled-components";
-import logo_oringe from "../../assets/img/logo_oringe.svg";
+import logo_sagwa from "../../assets/img/logo_sagwa.svg";
 
-function Oringe() {
+function Sagwa() {
   return (
     <Content>
-      <img src={logo_oringe} />
+      <img src={logo_sagwa} />
       <div>
-        <div className="title">오린지</div>
-        <div className="date">2024.05.12</div>
+        <div className="title">사과</div>
+        <div className="date">2024.05.14</div>
       </div>
     </Content>
   );
 }
 
-export default Oringe;
+export default Sagwa;
 
 const Content = styled.div`
   border: 1px solid rgba(255, 255, 255);
@@ -29,8 +29,8 @@ const Content = styled.div`
   justify-content: center;
 
   img {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
   }
 
   div {
@@ -41,7 +41,7 @@ const Content = styled.div`
   }
 
   div .title {
-    margin-top: 15px;
+    margin-top: 35px;
     margin-bottom: 5px;
     color: black;
     font-weight: bold;
