@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "../src/pages/home";
-import Devway from "../src/pages/devway";
-import ByDevway from "../src/pages/byDevway";
+import { BrowserRouter } from "react-router-dom";
+import Home from "./pages/home";
+import Devway from "./pages/devway";
+import ByDevway from "./pages/byDevway";
 
 function App() {
   return (
