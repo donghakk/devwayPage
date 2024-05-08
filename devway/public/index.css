@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "gamtan";
+  font-weight: normal;
+  src: url("./src/fonts/감탄로드돋움체 Regular.ttf") format("truetype");
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+input::placeholder,
+label,
+button,
+textarea,
+select {
+  font-family: "gamtan";
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import { BrowserRouter } from "react-router-dom";
 import Home from "./pages/home";
 import Devway from "./pages/devway";
 import ByDevway from "./pages/byDevway";
