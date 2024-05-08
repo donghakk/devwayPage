@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+<<<<<<< HEAD
 function byDevway(){
     // ts
 
@@ -11,6 +12,16 @@ function byDevway(){
             </h1>
         </Intro>
     )
+=======
+function byDevway() {
+  return (
+    <Container>
+      <div className="headerContainer">
+        <Header />
+      </div>
+    </Container>
+  );
+>>>>>>> cd94f2a1b695f467e14fdea54d4e9c302b9da76b
 }
 
 export default byDevway;
