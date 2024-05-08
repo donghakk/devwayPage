@@ -4,7 +4,7 @@ import logo_chelitalk from "../../assets/img/logo_chelitalk.svg";
 function Chelitalk() {
   return (
     <Content>
-      <img src={logo_chelitalk} alt="" />
+      <img src={logo_chelitalk} />
       <div>
         <div className="title">체리톡</div>
         <div className="date">2024.05.08</div>

@@ -1,8 +1,31 @@
 @font-face {
-  font-family: "gamtan";
+  font-family: "감탄로드돋움체 Regular";
+  font-weight: normal;
+
+  src: url("./src/fonts/감탄로드돋움체 Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "LINESeedKR-Bd";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2")
+    format("woff2");
+  font-weight: 100;
   font-style: normal;
-  font-weight: 200;
-  src: url("./src/fonts/gamtan-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SUIT-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSansKR-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body,
@@ -18,7 +41,7 @@ label,
 button,
 textarea,
 select {
-  font-family: "gamtan";
+  font-family: "SUIT-Regular";
 }
 
 html,

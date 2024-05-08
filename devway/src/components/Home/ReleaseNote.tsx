@@ -9,7 +9,7 @@ function ReleaseNote() {
         <img src={store} alt="어닝" />
         <Store />
       </StoreWrapper>
-      <h1>아미러</h1>
+      <h1>아미러이예원</h1>
     </Container>
   );
 }
