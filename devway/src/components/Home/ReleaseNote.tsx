@@ -19,7 +19,7 @@ function Releasenote() {
 export default Releasenote;
 
 const Wrapper = styled.div`
-  padding-top: 200px;
+  padding-top: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;

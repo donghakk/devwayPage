@@ -1,14 +1,18 @@
 import styled from "styled-components";
 
 import Header from "../components/Common/Header";
-// import DevwayStore from "../components/home/DevwayStore";
+import DevwayStore from "../components/home/DevwayStore";
+import Flowbar from "../components/home/Flowbar";
 
 function home() {
   return (
     <HomeContainer>
       <MainContent>
         <Header />
-        {/* <DevwayStore /> */}
+        <DevwayStore />
+        <Footer>
+          <Flowbar />
+        </Footer>
       </MainContent>
     </HomeContainer>
   );
@@ -18,8 +22,9 @@ export default home;
 
 const HomeContainer = styled.div`
   display: flex;
-  height: 100%;
-  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const MainContent = styled.div`
@@ -28,6 +33,11 @@ const MainContent = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  padding-right: 70px;
-  margin-bottom: 50px;
+  flex: 1;
+`;
+
+const Footer = styled.footer`
+  margin-top: 50px;
+  width: 100%;
+  margin-bottom: 20px;
 `;

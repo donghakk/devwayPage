@@ -23,6 +23,7 @@ const StoreWrapper = styled.div`
   position: relative;
   img {
     width: 900px;
+    height: 300px;
     display: block;
     z-index: 2;
   }
@@ -30,12 +31,12 @@ const StoreWrapper = styled.div`
 
 const Store = styled.div`
   background-color: #f7f7f7;
-  width: 700px;
-  height: 500px;
+  width: 600px;
+  height: 400px;
   position: absolute;
   top: 50px;
   z-index: 1;
-  margin-top: 100px;
+  margin-top: 80px;
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
