@@ -43,6 +43,7 @@ const NavLinkStyled = styled(NavLink)`
   &:hover {
     color: black;
     background-color: #fef7cf;
+    font-weight: bold;
     opacity: 1;
   }
 `;

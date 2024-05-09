@@ -15,5 +15,4 @@ export default Header;
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-right: 140px;
 `;

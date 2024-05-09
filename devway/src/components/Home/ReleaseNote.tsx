@@ -1,35 +1,23 @@
 import styled from "styled-components";
+import ReleaseDetail from "./ReleaseDetail";
 
-import store from "../../assets/img/store.svg";
-
-function ReleaseNote() {
+function Releasenote() {
   return (
-    <Container>
-      <StoreWrapper>
-        <img src={store} alt="어닝" />
-        <Store />
-      </StoreWrapper>
-      <h1>아미러이예원</h1>
-    </Container>
+    <Wrapper>
+      {/* <ReleaseDetail text="v.1.0.0 데브웨이 오픈" />
+      <ReleaseDetail text="v.1.0.0 데브웨이 오픈" />
+      <ReleaseDetail text="v.1.0.0 데브웨이 오픈" />
+      <ReleaseDetail text="v.1.0.0 데브웨이 오픈" />
+      <ReleaseDetail text="v.1.0.0 데브웨이 오픈" />
+      <ReleaseDetail text="v.1.0.0 데브웨이 오픈" />
+      <ReleaseDetail text="v.1.0.0 데브웨이 오픈" />
+      <ReleaseDetail text="v.1.0.0 데브웨이 오픈" /> */}
+    </Wrapper>
   );
 }
-export default ReleaseNote;
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+export default Releasenote;
 
-const StoreWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  img {
-    width: 800px;
-  }
-`;
-
-const Store = styled.div`
-  background-color: #f7f7f7;
-  width: 700px;
-  height: 500px;
+const Wrapper = styled.div`
+  padding-top: 100px;
 `;
