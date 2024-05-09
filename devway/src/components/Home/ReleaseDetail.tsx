@@ -6,13 +6,25 @@ interface ReleaseDetailProps {
 }
 
 function ReleaseDetail(props: ReleaseDetailProps) {
-  return <Wrapper color={props.color}>{props.text}</Wrapper>;
+  return (
+    <Wrapper>
+      <NoteOne color={props.color}>{props.text}</NoteOne>
+    </Wrapper>
+  );
 }
 
 export default ReleaseDetail;
 
-const Wrapper = styled.div<{ color: string }>`
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const NoteOne = styled.div<{ color: string }>`
   background-color: ${(props) => props.color};
   border: none;
-  width: 100px;
+  width: 80%;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
 `;

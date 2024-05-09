@@ -18,7 +18,6 @@ export default DevwayStore;
 const StoreWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-right: 50px;
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -36,6 +35,13 @@ const Store = styled.div`
   position: absolute;
   top: 50px;
   z-index: 1;
-  margin-right: 20px;
   margin-top: 100px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+  }
+  margin-bottom: 30px;
 `;
