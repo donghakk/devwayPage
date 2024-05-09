@@ -19,7 +19,7 @@ export default Chelitalk;
 
 const Content = styled.div`
   position: relative;
-  border: 1px solid rgba(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255); // 테두리 색을 일관되게 유지
   padding: 20px;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
   margin: 30px;
@@ -31,11 +31,15 @@ const Content = styled.div`
   align-items: center;
   justify-content: center;
 
+  .logo,
+  div {
+    transition: filter 0.5s ease;
+  }
+
   .logo {
     width: 150px;
     height: 150px;
-    position: relative;
-    z-index: 1; /* 로고 이미지가 다른 이미지 위에 보이도록 함 */
+    z-index: 1;
   }
 
   .hover-image {
@@ -44,9 +48,10 @@ const Content = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2; /* 다른 이미지를 로고 이미지 아래에 배치 */
+    z-index: 2;
     opacity: 0;
-    transition: all 0.5s ease;
+    transform: scale(0.6);
+    transition: opacity 0.5s ease, transform 0s;
   }
 
   div {
@@ -54,6 +59,7 @@ const Content = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 1;
   }
 
   div .title {
@@ -70,14 +76,12 @@ const Content = styled.div`
     color: #ffc30d;
   }
 
-  /* 마우스 호버 시 다른 이미지 표시 */
-  &:hover .hover-image {
-    opacity: 1;
-    transform: scale(0.6);
+  &:hover .logo,
+  &:hover div {
+    filter: blur(2px);
   }
 
-  /* 마우스 호버 시 컨테이너 블러 효과 */
-  &:hover {
-    filter: blur(2px);
+  &:hover .hover-image {
+    opacity: 1;
   }
 `;

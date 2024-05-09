@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 import Header from "../components/Common/Header";
-import DevwayStore from "../components/home/DevwayStore";
+// import DevwayStore from "../components/home/DevwayStore";
 
 function home() {
   return (
     <HomeContainer>
       <MainContent>
         <Header />
-        <DevwayStore />
+        {/* <DevwayStore /> */}
       </MainContent>
     </HomeContainer>
   );

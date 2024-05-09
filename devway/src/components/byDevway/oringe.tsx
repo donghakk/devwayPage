@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import logo_oringe from "../../assets/img/logo_oringe.svg";
+import qr from "../../assets/img/qr.svg";
 
 function Oringe() {
   return (
     <Content>
-      <img src={logo_oringe} />
+      <img className="logo" src={logo_oringe} />
+      <img className="hover-image" src={qr} />
       <div>
         <div className="title">오린지</div>
         <div className="date">2024.05.12</div>
@@ -16,7 +18,8 @@ function Oringe() {
 export default Oringe;
 
 const Content = styled.div`
-  border: 1px solid rgba(255, 255, 255);
+  position: relative;
+  border: 1px solid rgba(255, 255, 255); // 테두리 색을 일관되게 유지
   padding: 20px;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
   margin: 30px;
@@ -28,9 +31,27 @@ const Content = styled.div`
   align-items: center;
   justify-content: center;
 
-  img {
+  .logo,
+  div {
+    transition: filter 0.5s ease;
+  }
+
+  .logo {
     width: 150px;
     height: 150px;
+    z-index: 1;
+  }
+
+  .hover-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    transform: scale(0.6);
+    transition: opacity 0.5s ease, transform 0s;
   }
 
   div {
@@ -38,6 +59,7 @@ const Content = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 1;
   }
 
   div .title {
@@ -52,5 +74,14 @@ const Content = styled.div`
     font-weight: bold;
     font-size: 15px;
     color: #ffc30d;
+  }
+
+  &:hover .logo,
+  &:hover div {
+    filter: blur(2px);
+  }
+
+  &:hover .hover-image {
+    opacity: 1;
   }
 `;
