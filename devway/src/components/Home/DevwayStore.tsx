@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import store from "../../assets/img/store.svg";
-import Releasenote from "./Releasenote";
+import Releasenote from "./ReleaseNote";
 
 function DevwayStore() {
   return (
