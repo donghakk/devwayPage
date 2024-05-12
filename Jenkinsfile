@@ -23,5 +23,22 @@ pipeline {
                 }
             }
         }
+		stage('Build Docker Images') {
+            steps {
+                script {
+                    sh 'docker-compose -f /home/ubuntu/devway/devway/docker-compose.yml build app_devway'
+                    sh 'docker-compose -f /home/ubuntu/devway/devway/docker-compose.yml up -d app_devway'
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                script {
+					sh 'docker-compose -f /home/ubuntu/oringe/devway/docker-compose.yml build --no-cache nginx '
+                    sh 'docker-compose -f /home/ubuntu/oringe/devway/docker-compose.yml up -d nginx '
+                    sh 'docker-compose -f /home/ubuntu/oringe/devway/docker-compose.yml up -d certbot'
+                }
+            }
+        }
     }
 }
