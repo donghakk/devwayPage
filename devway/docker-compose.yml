@@ -13,5 +13,5 @@ services:
       - devway_network
 
 networks:
-devway_network:
-  external: true
+  devway_network:
+    external: true
