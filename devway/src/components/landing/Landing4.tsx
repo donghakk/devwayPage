@@ -1,14 +1,19 @@
+import React from "react";
 import styled from "styled-components";
 
-function Landing4() {
-  return <TempText>Landing4</TempText>;
-}
-
-export default Landing4;
-
-const TempText = styled.div`
+const Section = styled.section`
+  height: 100vh;
   display: flex;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  align-items: center;
 `;
+
+const Landing4 = () => {
+  return (
+    <Section>
+      <h1>Landing Page 4</h1>
+    </Section>
+  );
+};
+
+export default Landing4;
