@@ -1,44 +1,82 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import NavbarItem from "./NavbarItem";
+import { useState } from "react";
 
-function Sidebar() {
-  const menus = [
-    { name: "DEVWAY", path: "/devway" },
-    { name: "BY DEVWAY", path: "/bydevway" },
-    { name: "PDF GUIDE", path: "" },
-  ];
+interface NavbarProps {
+    name: string;
+}
 
-  return (
-    <Side>
-      {menus.map((menu, index) => (
-        <NavLinkStyled className="active" to={menu.path} key={index}>
-          <NavbarItem menu={menu} />
-        </NavLinkStyled>
-      ))}
-    </Side>
-  );
+function Sidebar({ name }: NavbarProps) {
+    const menus = [
+        { name: "HOME", path: "/" },
+        { name: "DEVWAY", path: "/devway" },
+        { name: "BY DEVWAY", path: "/bydevway" },
+        { name: "FAQ", path: "/faq" },
+        { name: "PDF GUIDE", path: "" },
+    ];
+
+    const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
+
+    return (
+        <Side>
+            {menus.map((menu, index) => (
+                <NavLinkStyled
+                    className="active"
+                    to={menu.path}
+                    key={index}
+                    isActive={menu.name === name}
+                    onMouseEnter={() => setHoveredMenu(menu.name)}
+                    onMouseLeave={() => setHoveredMenu(null)}
+                    hoveredMenu={hoveredMenu}
+                >
+                    {menu.name === "PDF GUIDE" && hoveredMenu === "PDF GUIDE"
+                        ? "Click to Download"
+                        : menu.name}
+                </NavLinkStyled>
+            ))}
+        </Side>
+    );
 }
 
 export default Sidebar;
 
 const Side = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 `;
 
-const NavLinkStyled = styled(NavLink)`
-  text-decoration: none;
-  background-color: white;
-  padding: 10px 10px;
-  width: 160px;
-  color: grey;
-  text-align: center;
+const NavLinkStyled = styled(NavLink)<{
+    isActive: boolean;
+    hoveredMenu: string | null;
+}>`
+    text-decoration: none;
+    background-color: white;
+    padding: 10px 10px;
+    width: 160px;
+    color: grey;
+    text-align: center;
+    &:hover {
+        color: black;
+        font-weight: bold;
+        opacity: 1;
+    }
 
-  &:hover {
+    ${({ isActive }) =>
+        isActive &&
+        `
     color: black;
-    font-weight: bold;
-    opacity: 1;
-  }
+      font-weight: bold;
+    `}
+
+    ${({ hoveredMenu }) =>
+        hoveredMenu === "PDF GUIDE" &&
+        `
+    &:hover {
+        content: "Click to Download";
+        color: red;
+        transition: color 0.4s;
+    }
+`}
 `;

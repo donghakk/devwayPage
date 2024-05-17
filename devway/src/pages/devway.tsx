@@ -5,7 +5,7 @@ import Header from "../components/Common/Header";
 function devway() {
   return (
     <DevwayContainer>
-      <Header />
+      <Header name="DEVWAY"/>
     </DevwayContainer>
   );
 }
