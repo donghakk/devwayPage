@@ -1,20 +1,24 @@
+import React from "react";
 import styled from "styled-components";
+import Landing1 from "../components/landing/Landing1";
 
-import Header from "../components/Common/Header";
-
-function devway() {
+const DevWay = () => {
   return (
-    <DevwayContainer>
-      <Header />
-    </DevwayContainer>
+    <Container>
+      <Landing1 />
+      <Landing1 />
+      <Landing1 />
+      <Landing1 />
+      <Landing1 />
+    </Container>
   );
-}
+};
 
-export default devway;
+export default DevWay;
 
-const DevwayContainer = styled.div`
+const Container = styled.div`
   display: flex;
-  height: 100vh;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: stretch;
+  overflow-y: auto;
 `;
