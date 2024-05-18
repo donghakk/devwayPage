@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
 import Header from "../components/Common/Header";
-import DevwayStore from "../components/Home/DevwayStore";
-import Flowbar from "../components/Home/Flowbar";
+import DevwayStore from "../components/home/DevwayStore";
+import People from "../components/home/People";
 
 function home() {
   return (
     <HomeContainer>
       <MainContent>
-        <Header />
+        <Header name="HOME" />
         <DevwayStore />
         <Footer>
-          <Flowbar />
+          <People />
         </Footer>
       </MainContent>
     </HomeContainer>
