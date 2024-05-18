@@ -55,7 +55,7 @@ const Landing2: React.FC<LandingProps> = ({ isActive }) => {
   useEffect(() => {
     if (isActive) {
       const subTitleDelay = 0.0; // SubTitle 애니메이션 지연 시간 없음
-      const contentDelay = 0.5; // SubTitle 애니메이션 이후 Content 애니메이션
+      const contentDelay = 0.2; // SubTitle 애니메이션 이후 Content 애니메이션
 
       const subTitleTimer = setTimeout(() => {
         setIsSubTitleActive(true);
