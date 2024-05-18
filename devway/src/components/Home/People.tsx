@@ -10,7 +10,7 @@ import jake from "../../assets/profileImg/jake.jpg";
 
 const People = () => {
     const handleButtonClick = () => {
-        window.location.href = "https://lab.ssafy.com/s10-final/S10P31B201";
+        window.open("https://lab.ssafy.com/s10-final/S10P31B201", "_blank");
     };
 
     return (
@@ -33,24 +33,24 @@ const People = () => {
                     <PeopleBox
                         img={donghak}
                         text="김동학"
-                        api="텍스트API, 이미지API, 비디오API"
+                        api="텍스트, 이미지, 비디오 API를 활용한 미디어 처리 기능"
                     />
                 </BannerColumn>
                 <BannerColumn>
                     <PeopleBox
                         img={sungjoo}
                         text="양성주"
-                        api="OpenWeatherMap API을 활용한 날씨"
+                        api="OpenWeatherMap API를 활용한 날씨 정보 기능"
                     />
                     <PeopleBox
                         img={sumin}
                         text="이수민"
-                        api="한국수출입은행 API를 활용한 환율"
+                        api="한국수출입은행 API를 활용한 환율 정보 기능"
                     />
                     <PeopleBox
                         img={jake}
                         text="김준섭"
-                        api="GPT API, GOOGLE CLOUD API - STT, TTS"
+                        api="GPT API, GOOGLE CLOUD API를 활용한 STT, TTS 기능"
                     />
                 </BannerColumn>
             </BannerContainer>

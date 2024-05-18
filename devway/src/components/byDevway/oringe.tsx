@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import logo_oringe from "../../assets/img/logo_oringe.svg";
-import qr from "../../assets/img/qr.svg";
+import qr from "../../assets/img/oringe_qr.svg";
 
 function Oringe() {
   return (

@@ -14,7 +14,7 @@ function PeopleBox(props: ContributorsProps) {
             </Box>
             <Content>
                 <Name>{props.text}</Name>
-                <p>20 commits <br/> {props.api}</p>
+                <p>{props.api}</p>
             </Content>
         </Wrapper>
     );

@@ -13,7 +13,7 @@ function Sidebar({ name }: NavbarProps) {
         { name: "DEVWAY", path: "/devway" },
         { name: "BY DEVWAY", path: "/bydevway" },
         { name: "FAQ", path: "/faq" },
-        { name: "PDF GUIDE", path: "" },
+        { name: "GUIDE", path: "" },
     ];
 
     const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
@@ -30,7 +30,7 @@ function Sidebar({ name }: NavbarProps) {
                     onMouseLeave={() => setHoveredMenu(null)}
                     hoveredMenu={hoveredMenu}
                 >
-                    {menu.name === "PDF GUIDE" && hoveredMenu === "PDF GUIDE"
+                    {menu.name === "GUIDE" && hoveredMenu === "GUIDE"
                         ? "Click to Download"
                         : menu.name}
                 </NavLinkStyled>
@@ -71,7 +71,7 @@ const NavLinkStyled = styled(NavLink)<{
     `}
 
     ${({ hoveredMenu }) =>
-        hoveredMenu === "PDF GUIDE" &&
+        hoveredMenu === "GUIDE" &&
         `
     &:hover {
         content: "Click to Download";

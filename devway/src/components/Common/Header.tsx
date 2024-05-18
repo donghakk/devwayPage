@@ -28,4 +28,11 @@ const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  img{
+    width: 600px;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+  margin-bottom: 30px;
 `;
