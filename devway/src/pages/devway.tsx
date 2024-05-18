@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import ReactFullpage from "@fullpage/react-fullpage";
-// import Landing1 from "@/components/landing/Landing1";
-// import Landing2 from "@/components/landing/Landing2";
-// import Landing3 from "@/components/landing/Landing3";
-// import Landing4 from "@/components/landing/Landing4";
-// import Landing5 from "@/components/landing/Landing5";
+import Landing1 from "@/components/landing/Landing1";
+import Landing2 from "@/components/landing/Landing2";
+import Landing3 from "@/components/landing/Landing3";
+import Landing4 from "@/components/landing/Landing4";
+import Landing5 from "@/components/landing/Landing5";
 
 const DevWay: React.FC = () => {
   const [activeSection, setActiveSection] = useState<number | null>(null);
@@ -27,7 +27,7 @@ const DevWay: React.FC = () => {
           }
           return (
             <Container>
-              {/* <div className="section">
+              <div className="section">
                 <Landing1 isActive={activeSection === 0} />
               </div>
               <div className="section">
@@ -41,7 +41,7 @@ const DevWay: React.FC = () => {
               </div>
               <div className="section">
                 <Landing5 isActive={activeSection === 4} />
-              </div> */}
+              </div>
             </Container>
           );
         }}
