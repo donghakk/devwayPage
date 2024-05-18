@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 import Header from "../components/Common/Header";
 import DevwayStore from "../components/home/DevwayStore";
-import Flowbar from "../components/home/Flowbar";
+import People from "../components/home/People";
 
 function home() {
   return (
     <HomeContainer>
       <MainContent>
-        <Header />
+        <Header name="HOME" />
         <DevwayStore />
         <Footer>
-          <Flowbar />
+          <People/>
         </Footer>
       </MainContent>
     </HomeContainer>

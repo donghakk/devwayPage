@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import logo_sagwa from "../../assets/img/logo_sagwa.svg";
-import qr from "../../assets/img/qr.svg";
+import qr from "../../assets/img/sagwa_qr.svg";
 
 function Sagwa() {
   return (

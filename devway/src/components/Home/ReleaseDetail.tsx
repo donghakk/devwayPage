@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 interface ReleaseDetailProps {
+  ver: string
   text: string;
   color: string;
 }
@@ -8,7 +9,9 @@ interface ReleaseDetailProps {
 function ReleaseDetail(props: ReleaseDetailProps) {
   return (
     <Wrapper>
-      <NoteOne color={props.color}>{props.text}</NoteOne>
+      <NoteOne color={props.color}>
+        <Ver>{props.ver}</Ver>
+        {props.text}</NoteOne>
     </Wrapper>
   );
 }
@@ -27,4 +30,13 @@ const NoteOne = styled.div<{ color: string }>`
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
+  display: flex;
+  align-items: center;
 `;
+
+const Ver = styled.div`
+  font-weight: bold;
+  padding: 5px;
+  padding-right: 20px;
+  font-size: 18px;
+`

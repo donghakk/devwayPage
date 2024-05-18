@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import logo_chelitalk from "../../assets/img/logo_chelitalk.svg";
-import qr from "../../assets/img/qr.svg";
+import qr from "../../assets/img/chelitalk_qr.svg";
 
 function Chelitalk() {
   return (
