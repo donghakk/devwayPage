@@ -51,7 +51,10 @@ const Landing5: React.FC<LandingProps> = ({ isActive }) => {
     <Section>
       <Text>데브웨이의 컨트리뷰터가 되어주세요</Text>
       <SubText>Please be our contributor to Devway</SubText>
-      <GitLabButton href="https://gitlab.com/your-repo" target="_blank">
+      <GitLabButton
+        href="https://lab.ssafy.com/s10-final/S10P31B201"
+        target="_blank"
+      >
         <ButtonImage src={buttonimage} alt="GitLab Link" />
       </GitLabButton>
     </Section>

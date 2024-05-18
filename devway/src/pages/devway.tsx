@@ -9,6 +9,7 @@ import Landing5 from "@/components/landing/Landing5";
 
 const DevWay: React.FC = () => {
   const [activeSection, setActiveSection] = useState<number | null>(null);
+  const [fullpageApi, setFullpageApi] = useState<any>(null);
 
   return (
     <>
@@ -20,7 +21,10 @@ const DevWay: React.FC = () => {
         afterLoad={(origin, destination) => {
           setActiveSection(destination.index);
         }}
-        render={({ state, fullpageApi }) => {
+        render={({ fullpageApi: api }) => {
+          if (!fullpageApi && api) {
+            setFullpageApi(api);
+          }
           return (
             <Container>
               <div className="section">
@@ -43,6 +47,9 @@ const DevWay: React.FC = () => {
         }}
       />
       <ScrollGuide>↓</ScrollGuide>
+      {fullpageApi && (
+        <TopButton onClick={() => fullpageApi.moveTo(1, 0)}>↑</TopButton>
+      )}
       <style>
         {`
           .fp-watermark {
@@ -103,7 +110,7 @@ const bounce = keyframes`
 const ScrollGuide = styled.div`
   position: fixed;
   bottom: 20px;
-  left: 47%;
+  left: 45%;
   transform: translateX(-50%);
   font-size: 2rem;
   color: #ff8617;
@@ -118,4 +125,31 @@ const ScrollGuide = styled.div`
     font-size: 1rem;
     margin-top: 10px;
   }
+`;
+
+const TopButton = styled.button`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #ff8617;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  z-index: 9999; /* z-index를 높게 설정하여 항상 위에 보이도록 함 */
 `;

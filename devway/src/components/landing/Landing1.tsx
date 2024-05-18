@@ -131,7 +131,7 @@ const Landing1: React.FC<Landing1Props> = ({ isActive }) => {
   return (
     <Container>
       <FixedHeader>
-        <Header />
+        <Header name="DEVWAY" />
       </FixedHeader>
       <Section>
         <ChatContainer>
