@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import Header from "@/components/Common/Header";
-import DevwayStore from "@/components/home/DevwayStore";
+import Header from "../components/Common/Header";
+import DevwayStore from "../components/home/DevwayStore";
 import People from "../components/home/People";
 
 function home() {
