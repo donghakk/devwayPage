@@ -11,7 +11,7 @@ function home() {
         <Header name="HOME" />
         <DevwayStore />
         <Footer>
-          <People/>
+          <People />
         </Footer>
       </MainContent>
     </HomeContainer>
