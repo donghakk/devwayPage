@@ -123,6 +123,8 @@ const NavLinkStyled = styled(NavLink)<{
 const GuideContainer = styled.div`
   position: relative;
   width: 160px; /* GUIDE 메뉴가 동일한 폭을 유지하도록 설정 */
+  display: flex;
+  justify-content: center;
 `;
 
 const DropdownMenu = styled.div`
@@ -133,7 +135,7 @@ const DropdownMenu = styled.div`
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%; /* 부모 요소와 동일한 너비 */
+  width: 160px; /* 부모 요소와 동일한 너비 */
   z-index: 1;
 `;
 
