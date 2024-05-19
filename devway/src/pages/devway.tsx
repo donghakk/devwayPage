@@ -109,8 +109,8 @@ const bounce = keyframes`
 
 const ScrollGuide = styled.div`
   position: fixed;
-  bottom: 20px;
-  left: 45%;
+  bottom: 0vh;
+  left: 46vw;
   transform: translateX(-50%);
   font-size: 2rem;
   color: #ff8617;
