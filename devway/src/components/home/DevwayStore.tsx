@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useState } from 'react';
+import { useState } from "react";
 
 import store from "../../assets/img/store.svg";
 import Releasenote from "./ReleaseNote";
@@ -19,10 +19,10 @@ function DevwayStore() {
   return (
     <StoreWrapper>
       {selectedItem && (
-          <ModalWrapper>
-            <ReleaseModal item={selectedItem} onClose={closeModal} />
-          </ModalWrapper>
-        )}
+        <ModalWrapper>
+          <ReleaseModal item={selectedItem} onClose={closeModal} />
+        </ModalWrapper>
+      )}
       <img src={store} alt="어닝" />
       <Store>
         <Releasenote onClick={handleClick} />
@@ -43,6 +43,7 @@ const StoreWrapper = styled.div`
     height: 300px;
     display: block;
     z-index: 2;
+    margin-left: 15px; //오른쪽으로 5px 이동
   }
 `;
 

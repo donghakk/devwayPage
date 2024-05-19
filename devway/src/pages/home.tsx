@@ -35,6 +35,9 @@ const MainContent = styled.div`
   align-items: center;
   margin-top: 50px;
   flex: 1;
+  h3 {
+    margin-bottom: 0px;
+  }
 `;
 
 const Footer = styled.footer`

@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { useState } from "react";
+import { FaDownload } from "react-icons/fa";
 
 interface NavbarProps {
   name: string;
@@ -49,9 +50,11 @@ function Sidebar({ name }: NavbarProps) {
             {showDropdown && (
               <DropdownMenu>
                 <DropdownItem href="/Devway_User_Guide.html" download>
+                  <FaDownload />
                   English
                 </DropdownItem>
                 <DropdownItem href="/Devway_User_Guide_KO.html" download>
+                  <FaDownload />
                   한국어
                 </DropdownItem>
               </DropdownMenu>
@@ -135,7 +138,8 @@ const DropdownMenu = styled.div`
 `;
 
 const DropdownItem = styled.a`
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 10px;
   color: grey;
   text-decoration: none;
@@ -144,5 +148,9 @@ const DropdownItem = styled.a`
   &:hover {
     background-color: #f0f0f0;
     color: black;
+  }
+
+  svg {
+    margin-right: 8px; /* 아이콘과 텍스트 사이의 간격 */
   }
 `;
