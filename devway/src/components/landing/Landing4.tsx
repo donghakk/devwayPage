@@ -58,14 +58,6 @@ const fadeIn = keyframes`
     opacity: 1;
   }
 `;
-const fadeout = keyframes`
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-`;
 
 const Text = styled.div<{ isActive: boolean }>`
   margin-bottom: 10px;
