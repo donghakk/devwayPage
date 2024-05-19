@@ -83,22 +83,24 @@ function FAQList() {
             <p style={{ marginLeft: "30px", fontWeight: "bold" }}>Q</p>
             <p style={{ marginLeft: "30px" }}>{item.que}</p>
           </NonClick>
-          <Answer isVisible={visibleIndexes.includes(index)} index={index}>
-            <p
-              style={{
-                marginLeft: "30px",
-                fontWeight: "bold",
-              }}
-            >
-              A
-            </p>
-            <p
-              style={{ marginLeft: "30px", lineHeight: "23px" }}
-              dangerouslySetInnerHTML={{
-                __html: item.ans.replace(/\n/g, "<br>"),
-              }}
-            />
-          </Answer>
+          {visibleIndexes.includes(index) && (
+            <Answer isVisible={visibleIndexes.includes(index)} index={index}>
+              <p
+                style={{
+                  marginLeft: "30px",
+                  fontWeight: "bold",
+                }}
+              >
+                A
+              </p>
+              <p
+                style={{ marginLeft: "30px", lineHeight: "23px" }}
+                dangerouslySetInnerHTML={{
+                  __html: item.ans.replace(/\n/g, "<br>"),
+                }}
+              />
+            </Answer>
+          )}
         </Feed>
       ))}
       <Btn onClick={() => copyToClipboard("devway201@gmail.com")}>
