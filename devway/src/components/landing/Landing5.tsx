@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import buttonimage from "@/assets/img/landing/gitlablink.svg";
+import buttonimage from "@/assets/img/landing/gitlabbutton.svg";
 
 interface LandingProps {
   isActive: boolean;
@@ -35,7 +35,7 @@ const GitLabButton = styled.a`
 `;
 
 const ButtonImage = styled.img`
-  width: auto;
+  width: 300px;
   height: auto;
   max-width: 100%; /* 이미지의 최대 너비를 부모 요소에 맞게 설정 */
   max-height: 100%; /* 이미지의 최대 높이를 부모 요소에 맞게 설정 */
