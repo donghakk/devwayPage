@@ -9,6 +9,7 @@ function home() {
     <HomeContainer>
       <MainContent>
         <Header name="HOME" />
+        <h3>Releases</h3>
         <DevwayStore />
         <Footer>
           <People />

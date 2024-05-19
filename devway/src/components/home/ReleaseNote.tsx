@@ -1,27 +1,70 @@
 import styled from "styled-components";
-import ReleaseDetail from "./ReleaseDetail";
 
-function Releasenote() {
+interface Released {
+    ver: string;
+    date: string;
+    title: string;
+    content: string;
+}
+
+interface ReleaseNoteProps {
+    onClick: (item: Released) => void;
+}
+
+const list: Released[] = [
+    {
+        ver: "v.1.6.0",
+        date: "May 18, 2024",
+        title: "Utilizing Naver Search API",
+        content: "1. Search - Provides search functionality for Blog, Encyclopedia, Image, Local, and News.\n2. Typo Correction - Automatically corrects search queries typed with the wrong language setting (Korean/English), suggesting the correct terms.\n",
+    },
+    {
+        ver: "v.1.5.0",
+        date: "May 10, 2024",
+        title: "Utilizing Korea Exchange Bank API",
+        content: "1. Exchange Rates -  Get exchange rate information for various countries.",
+    },
+    {
+        ver: "v.1.4.0",
+        date: "May 02, 2024",
+        title: "Utilizing Google Cloud API",
+        content: "1. STT - Convert English audio recordings in .wav format to text.\n2. TTS - Get sentences entered in Korean and English as .mp3 audio files.",
+    },
+    {
+        ver: "v.1.3.0",
+        date: "April 30, 2024",
+        title: "Utilizing Kakao Search API",
+        content: "1. Book - Get book information based on search queries.",
+    },
+    {
+        ver: "v.1.2.0",
+        date: "April 25, 2024",
+        title: "Utilizing OpenWeatherMap API",
+        content: "1. Weather - Get today's weather and the forecast for the next five days.",
+    },
+    {
+        ver: "v.1.1.0",
+        date: "April 20, 2024",
+        title: "Utilizing chatGPT API",
+        content: "1. Language - Use chatGPT in both Korean and English.\n2. Grammar Check - Verify if the sentences entered in Korean and English are grammatically correct.",
+    },
+    {
+        ver: "v.1.0.0",
+        date: "April 10, 2024",
+        title: "Basic Blocks",
+        content: "1. Text - Provides functionalities including string length measurement, language detection, and special character checks.\n2. Image - Provides functionalities including saving images from URLs, converting URLs to images, transforming images to byte arrays, and saving images from byte arrays.\n3. Video - Provides funtionalities including saving videos from URLs, converting URLs to videos, transforming videos into byte arrays, and saving videos from byte arrays.",
+    },
+];
+
+function Releasenote({ onClick }: ReleaseNoteProps) {
     return (
         <Wrapper>
-            <ReleaseDetail ver="v.1.9.0" text="오타 변환 기능 추가" color="#6FBD72" />
-            <ReleaseDetail ver="v.1.8.2" text="버그 수정" color="#FFEB81" />
-            <ReleaseDetail ver="v.1.8.1" text="버그 수정" color="#6FBD72" />
-            <ReleaseDetail ver="v.1.8.0" text="지역 검색 기능 추가" color="#FFEB81" />
-            <ReleaseDetail ver="v.1.7.0" text="백과사전 검색 기능 추가" color="#6FBD72" />
-            <ReleaseDetail ver="v.1.6.0" text="네이버 블로그 및 이미지 검색 기능 추가" color="#FFEB81" />
-            <ReleaseDetail ver="v.1.5.0" text="뉴스 검색 기능 추가" color="#6FBD72" />
-            <ReleaseDetail ver="v.1.4.1" text="버그 수정" color="#FFEB81" />
-            <ReleaseDetail ver="v.1.4.0" text="환율 기능 추가" color="#6FBD72" />
-            <ReleaseDetail ver="v.1.3.0" text="날씨 기능 추가 " color="#FFEB81" />
-            <ReleaseDetail ver="v.1.2.1" text="버그 수정" color="#6FBD72" />
-            <ReleaseDetail
-                ver="v.1.2.0" text="도서 검색 기능 추가"
-                color="#FFEB81"
-            />
-            <ReleaseDetail ver="v.1.1.0" text="STT, TTS 기능 추가" color="#6FBD72" />
-            <ReleaseDetail ver="v.1.0.1" text="버그 수정" color="#FFEB81" />
-            <ReleaseDetail ver="v.1.0.0" text="데브웨이 오픈" color="#6FBD72" />
+            {list.map((item, index) => (
+                <NoteOne key={index} index={index} onClick={() => onClick(item)}>
+                    Devway {item.ver} released
+                    <Date>{item.date}</Date>
+                </NoteOne>
+            ))}
         </Wrapper>
     );
 }
@@ -34,4 +77,31 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     padding-bottom: 20px;
+    align-items: center;
+`;
+
+interface Props {
+    index: number;
+}
+
+const NoteOne = styled.div<Props>`
+    background-color: ${({ index }) =>
+        index % 2 === 0 ? "#FFEB81" : "#6FBD72"};
+    border: none;
+    width: 80%;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 13px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+`;
+
+const Date = styled.div`
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 180px;
 `;
