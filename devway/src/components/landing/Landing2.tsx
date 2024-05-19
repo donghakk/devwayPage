@@ -41,11 +41,13 @@ const AnimatedImage = styled.img<{ isActive: boolean; delay: number }>`
 `;
 
 const Text = styled.div`
-  margin-top: 10px;
+  position: absolute;
+  bottom: 10vh; /* 화면 하단에서 10vh 위로 위치 */
   text-align: center;
   white-space: pre-line; /* 줄바꿈을 인식하도록 설정 */
   font-size: 16px;
   line-height: 1.5;
+  width: 80%; /* 텍스트가 너무 넓어지지 않도록 너비 제한 */
 `;
 
 const Landing2: React.FC<LandingProps> = ({ isActive }) => {
