@@ -30,8 +30,8 @@ const fadeInUp = keyframes`
 
 const fadeInLeft = keyframes`
   from {
-    opacity: 0;
-    transform: translateX(-50px);
+    opacity: 0.3;
+    transform: translateX(-100px);
   }
   to {
     opacity: 1;
@@ -41,8 +41,8 @@ const fadeInLeft = keyframes`
 
 const fadeInRight = keyframes`
   from {
-    opacity: 0;
-    transform: translateX(50px);
+    opacity: 0.3;
+    transform: translateX(100px);
   }
   to {
     opacity: 1;
@@ -58,6 +58,14 @@ const fadeIn = keyframes`
     opacity: 1;
   }
 `;
+const fadeout = keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+`;
 
 const Text = styled.div<{ isActive: boolean }>`
   margin-bottom: 10px;
@@ -68,7 +76,7 @@ const Text = styled.div<{ isActive: boolean }>`
   ${({ isActive }) =>
     isActive &&
     css`
-      animation: ${fadeInUp} 0.5s ease-out forwards;
+      animation: ${fadeInUp} 0.3s ease-out forwards;
     `}
 `;
 
@@ -81,7 +89,7 @@ const SubText = styled.div<{ isActive: boolean }>`
   ${({ isActive }) =>
     isActive &&
     css`
-      animation: ${fadeInRight} 0.5s ease-out 0.5s forwards;
+      animation: ${fadeInUp} 0.5s ease-out 0.5s forwards;
     `}
 `;
 const SubTextOrigin = styled.div<{ isActive: boolean }>`
