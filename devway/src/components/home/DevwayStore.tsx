@@ -1,14 +1,31 @@
 import styled from "styled-components";
+import { useState } from 'react';
 
 import store from "../../assets/img/store.svg";
 import Releasenote from "./ReleaseNote";
+import ReleaseModal from "./ReleaseModal";
 
 function DevwayStore() {
+  const [selectedItem, setSelectedItem] = useState<Released | null>(null);
+
+  const handleClick = (item: Released) => {
+    setSelectedItem(item);
+  };
+
+  const closeModal = () => {
+    setSelectedItem(null);
+  };
+
   return (
     <StoreWrapper>
+      {selectedItem && (
+          <ModalWrapper>
+            <ReleaseModal item={selectedItem} onClose={closeModal} />
+          </ModalWrapper>
+        )}
       <img src={store} alt="어닝" />
       <Store>
-        <Releasenote />
+        <Releasenote onClick={handleClick} />
       </Store>
     </StoreWrapper>
   );
@@ -46,3 +63,23 @@ const Store = styled.div`
   }
   margin-bottom: 30px;
 `;
+
+const ModalWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.5);
+`;
+
+interface Released {
+  ver: string;
+  date: string;
+  title: string;
+  content: string;
+}
