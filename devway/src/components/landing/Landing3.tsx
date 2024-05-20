@@ -188,7 +188,7 @@ const BannerContainer = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column; /* 세로로 나열되도록 변경 */
-  margin-bottom: 100px; /* IndicationImage와 겹치지 않도록 아래쪽 마진을 줄임 */
+  margin-bottom: 200px; /* IndicationImage와 겹치지 않도록 아래쪽 마진을 줄임 */
 `;
 
 const BannerRow = styled.div<{ offset?: number }>`
