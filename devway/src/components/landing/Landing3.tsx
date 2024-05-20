@@ -188,7 +188,7 @@ const BannerContainer = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column; /* 세로로 나열되도록 변경 */
-  margin-bottom: 200px; /* IndicationImage와 겹치지 않도록 아래쪽 마진 추가 */
+  margin-bottom: 200px; /* IndicationImage와 겹치지 않도록 아래쪽 마진을 늘림 */
 `;
 
 const BannerRow = styled.div<{ offset?: number }>`
@@ -237,7 +237,7 @@ const ProfileList: React.FC = () => {
 
 const IndicationImage = styled.img`
   position: absolute;
-  bottom: 100px;
+  bottom: 50px; /* 이미지를 더 위로 이동 */
   left: 50%;
   transform: translateX(-50%);
   width: 50%; /* 이미지 크기를 원본의 70%로 조정 */
