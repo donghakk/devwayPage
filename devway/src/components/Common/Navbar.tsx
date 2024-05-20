@@ -11,9 +11,9 @@ function Sidebar({ name }: NavbarProps) {
   const menus = [
     { name: "HOME", path: "/" },
     { name: "DEVWAY", path: "/devway" },
-    { name: "BY DEVWAY", path: "/bydevway" },
-    { name: "FAQ", path: "/faq" },
+    { name: "SERVICE", path: "/bydevway" },
     { name: "GUIDE", path: "/guideline.html", download: true },
+    { name: "FAQ", path: "/faq" },
   ];
 
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);

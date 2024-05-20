@@ -8,7 +8,7 @@ function byDevway() {
   return (
     <ByDevContainer>
       <MainContent>
-        <Header name="BY DEVWAY" />
+        <Header name="SERVICE" />
         <Info>DEVWAY 소스를 활용해 만든 멋진 서비스들을 소개할게요!</Info>
         <Body>
           <Oringe />

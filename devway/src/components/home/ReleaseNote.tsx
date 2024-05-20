@@ -22,7 +22,7 @@ const list: Released[] = [
   {
     ver: "v.1.5.0",
     date: "May 10, 2024",
-    title: "Utilizing Korea Exchange Bank API",
+    title: "Utilizing Korea EximBank API",
     content:
       "1. Exchange Rates -  Get exchange rate information for various countries.",
   },
