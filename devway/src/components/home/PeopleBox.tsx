@@ -4,6 +4,7 @@ interface ContributorsProps {
     text: string;
     img: string;
     api: string;
+    app: string;
 }
 
 function PeopleBox(props: ContributorsProps) {
@@ -14,7 +15,7 @@ function PeopleBox(props: ContributorsProps) {
             </Box>
             <Content>
                 <Name>{props.text}</Name>
-                <p>{props.api}</p>
+                <p>{props.app} <br/> {props.api}</p>
             </Content>
         </Wrapper>
     );

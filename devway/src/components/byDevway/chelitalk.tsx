@@ -9,7 +9,7 @@ function Chelitalk() {
       <img className="hover-image" src={qr} />
       <div>
         <div className="title">체리톡</div>
-        <div className="date">2024.05.08</div>
+        <div className="date">2024.05.14</div>
       </div>
     </Content>
   );

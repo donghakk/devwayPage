@@ -9,7 +9,7 @@ function Sagwa() {
       <img className="hover-image" src={qr} />
       <div>
         <div className="title">사과</div>
-        <div className="date">2024.05.14</div>
+        <div className="date">2024.05.08</div>
       </div>
     </Content>
   );
