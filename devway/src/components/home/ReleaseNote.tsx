@@ -13,6 +13,13 @@ interface ReleaseNoteProps {
 
 const list: Released[] = [
   {
+    ver: "v.1.7.0",
+    date: "May 24, 2024",
+    title: "Utilizing FCM API",
+    content:
+      "1. Alarm - Provides an alarm feature utilizing FCM, available on the Galaxy Watch.",
+  },
+  {
     ver: "v.1.6.0",
     date: "May 18, 2024",
     title: "Utilizing Naver Search API",
