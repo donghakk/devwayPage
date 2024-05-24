@@ -9,7 +9,9 @@ function home() {
     <HomeContainer>
       <MainContent>
         <Header name="HOME" />
-        <h3>Releases</h3>
+        <TitleContainer>
+          <div className="small-title">Releases</div>
+        </TitleContainer>
         <DevwayStore />
         <Footer>
           <People />
@@ -35,13 +37,20 @@ const MainContent = styled.div`
   align-items: center;
   margin-top: 50px;
   flex: 1;
-  h3 {
-    margin-bottom: 0px;
-  }
 `;
 
 const Footer = styled.footer`
-  margin-top: 50px;
+  margin-top: 100px;
   width: 100%;
   margin-bottom: 20px;
+`;
+
+const TitleContainer = styled.div`
+  border: 2px solid #4ecb71;
+  border-radius: 30px;
+  padding: 10px;
+  .small-title {
+    font-weight: bold;
+    font-size: 20px;
+  }
 `;

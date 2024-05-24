@@ -10,7 +10,7 @@ interface NavbarProps {
 function Sidebar({ name }: NavbarProps) {
   const menus = [
     { name: "HOME", path: "/" },
-    { name: "DEVWAY", path: "/devway" },
+    { name: "ABOUT", path: "/devway" },
     { name: "SERVICE", path: "/bydevway" },
     { name: "GUIDE", path: "/guideline.html", download: true },
     { name: "FAQ", path: "/faq" },

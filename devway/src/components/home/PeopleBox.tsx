@@ -1,24 +1,26 @@
 import styled from "styled-components";
 
 interface ContributorsProps {
-    text: string;
-    img: string;
-    api: string;
-    app: string;
+  text: string;
+  img: string;
+  api: string;
+  app?: string;
 }
 
 function PeopleBox(props: ContributorsProps) {
-    return (
-        <Wrapper>
-            <Box>
-                <img src={props.img} alt="img"/>
-            </Box>
-            <Content>
-                <Name>{props.text}</Name>
-                <p>{props.app} <br/> {props.api}</p>
-            </Content>
-        </Wrapper>
-    );
+  return (
+    <Wrapper>
+      <Box>
+        <img src={props.img} alt="img" />
+      </Box>
+      <Content>
+        <Name>{props.text}</Name>
+        <p>
+          {props.app} <br /> {props.api}
+        </p>
+      </Content>
+    </Wrapper>
+  );
 }
 
 export default PeopleBox;
@@ -35,27 +37,27 @@ const Wrapper = styled.div`
 `;
 
 const Content = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 30px;
 `;
 
 const Name = styled.div`
-    font-size: 16px;
-    text-align: center;
-    margin-top: 5px;
-    font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 5px;
+  font-weight: bold;
 `;
 
 const Box = styled.div`
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  margin-left: 30px;
+  img {
     width: 50px;
     height: 50px;
-    border-radius: 30px;
-    margin-left: 30px;
-    img {
-        width: 50px;
-        height: 50px;
-        object-fit: cover;
-    }
+    object-fit: cover;
+  }
 `;
