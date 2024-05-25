@@ -17,7 +17,7 @@ function Header({ name }: NavbarProps) {
   return (
     <HeaderContainer>
       <img src={devway} alt="devway logo" onClick={goToHome} />
-      <NavBar name={name}/>
+      <NavBar name={name} />
     </HeaderContainer>
   );
 }
@@ -29,7 +29,7 @@ const HeaderContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  img{
+  img {
     width: 600px;
     cursor: pointer;
     margin-bottom: 30px;

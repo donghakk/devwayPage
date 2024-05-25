@@ -3,10 +3,10 @@ import PeopleBox from "./PeopleBox";
 
 import sumin from "../../assets/profileImg/sumin.jpg";
 import sungjoo from "../../assets/profileImg/sungjoo.jpg";
-import donghak from "../../assets/profileImg/donghak.jpg";
+import donghak from "../../assets/profileImg/donghak.png";
 import yewon from "../../assets/profileImg/yewon.jpg";
 import sohyeon from "../../assets/profileImg/sohyeon.jpg";
-import jake from "../../assets/profileImg/jake.jpg";
+import jake from "../../assets/profileImg/jake.png";
 import coach1 from "../../assets/profileImg/coach1.png";
 import coach2 from "../../assets/profileImg/coach2.png";
 
