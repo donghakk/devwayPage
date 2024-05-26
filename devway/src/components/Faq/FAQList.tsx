@@ -20,6 +20,10 @@ interface QA {
   ans: string;
 }
 
+interface FAQListProps {
+  openModal: () => void;
+}
+
 const list: QA[] = [
   {
     que: "기여하거나 코드를 수정 한다면 승인 여부는 어디서 확인하나요?",
@@ -47,7 +51,7 @@ const list: QA[] = [
   },
 ];
 
-function FAQList() {
+function FAQList({ openModal }: FAQListProps) {
   const [visibleIndexes, setVisibleIndexes] = useState<number[]>([]);
 
   const toggleVisibility = (index: number) => {
@@ -103,7 +107,7 @@ function FAQList() {
           )}
         </Feed>
       ))}
-      <Btn onClick={() => copyToClipboard("devway201@gmail.com")}>
+      <Btn onClick={openModal}>
         Contact us
       </Btn>
     </Wrapper>

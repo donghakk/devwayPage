@@ -95,8 +95,6 @@ const Title = styled.div`
     font-weight: bold;
 `;
 
-const Content = styled.div``;
-
 const Btn = styled.div`
 display: flex;
 justify-content: flex-end;
