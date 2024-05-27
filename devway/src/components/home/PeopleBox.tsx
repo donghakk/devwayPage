@@ -32,10 +32,10 @@ const Wrapper = styled.div`
     display: flex;
     align-items: flex-start
     margin: 10px;
-    width: 30vw;
+    width: 32vw;
     border-radius: 5px;
     box-shadow: 0 5px 13px rgba(0,0,0,0.10);
-    padding: 35px 20px;
+    padding: 35px 15px;
 `;
 
 const Content = styled.div`
@@ -43,10 +43,14 @@ const Content = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding-left: 30px;
+
+  span {
+    margin-bottom: 1px;
+  }
 `;
 
 const Name = styled.div`
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
   margin-top: 5px;
   margin-bottom: 5px;
