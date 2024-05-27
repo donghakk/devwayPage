@@ -15,9 +15,12 @@ function PeopleBox(props: ContributorsProps) {
       </Box>
       <Content>
         <Name>{props.text}</Name>
-        <p>
-          {props.app} <br /> {props.api}
-        </p>
+        <span>
+          {props.app}
+        </span>
+        <span>
+          {props.api}
+        </span>
       </Content>
     </Wrapper>
   );
@@ -32,8 +35,7 @@ const Wrapper = styled.div`
     width: 30vw;
     border-radius: 5px;
     box-shadow: 0 5px 13px rgba(0,0,0,0.10);
-    padding: 10px;
-    padding-top: 20px;
+    padding: 35px 20px;
 `;
 
 const Content = styled.div`
@@ -47,6 +49,7 @@ const Name = styled.div`
   font-size: 16px;
   text-align: center;
   margin-top: 5px;
+  margin-bottom: 5px;
   font-weight: bold;
 `;
 

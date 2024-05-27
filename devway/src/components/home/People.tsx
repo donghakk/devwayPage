@@ -46,7 +46,6 @@ const People = () => {
             img={coach1}
             text="양희제"
             api="네이버 검색 API를 통한 오타변환 기능"
-            app="팀 데브웨이 코치"
           />
         </BannerColumn>
         <BannerColumn>
@@ -72,7 +71,6 @@ const People = () => {
             img={coach2}
             text="김주아"
             api="네이버 검색 API를 통한 백과사전 검색 기능"
-            app="팀 데브웨이 코치"
           />
         </BannerColumn>
       </BannerContainer>

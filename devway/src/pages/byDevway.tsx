@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Oringe from "../components/byDevway/oringe";
 import Chelitalk from "../components/byDevway/chelitalk";
 import Sagwa from "../components/byDevway/sagwa";
+import Watch from "../components/byDevway/watch";
 import Header from "../components/Common/Header";
 
 function byDevway() {
@@ -16,6 +17,7 @@ function byDevway() {
                     <Sagwa />
                     <Oringe />
                     <Chelitalk />
+                    <Watch />
                 </Body>
                 <Footer>
                     QR코드를 통해 APK 파일을 다운로드 할 수 있습니다.
